@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>NG_2 @InternPedia</title>
+    <link rel="icon" href="https://www.internpedia.in/favicon.ico" type="image/x-icon">
+    
+</head>
+<body>
+    <div class="logo">
+        <a href="https://www.internpedia.in/" target="_blank"><img src="https://shorturl.at/5XuIL" alt="Logo"></a>
+    </div>
+    <div class="container">
+        <form id="loginForm" onsubmit="return handleLogin(event)">
+            <h2>Welcome Back</h2>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <span id="togglePassword" class="toggle-password">👁️</span>
+            </div>
+            <div id="errorMessage" class="error-message"></div>
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="signup.html">Sign up here</a>.</p>
+        </form>
+    </div>
+    <footer class="footer">
+        <p>About Me: I'm Nischaya Garg, a passionate web developer dedicated to crafting user-friendly and secure applications that deliver exceptional web experiences.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

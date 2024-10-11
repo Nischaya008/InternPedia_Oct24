@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>NG_2 @InternPedia</title>
+    <link rel="icon" href="https://www.internpedia.in/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="logo">
+        <a href="https://www.internpedia.in/" target="_blank"><img src="https://shorturl.at/5XuIL" alt="Logo"></a>
+    </div>
+    <div class="container">
+        <form id="signupForm" onsubmit="return handleSignup(event)">
+            <h2>Create Account</h2>
+            <div class="input-group">
+                <label for="newUsername">Username</label>
+                <input type="text" id="newUsername" name="newUsername" required>
+            </div>
+            <div class="input-group">
+                <label for="newPassword">Password</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+                <span id="toggleNewPassword" class="toggle-password">👁️</span>
+            </div>
+            <div id="passwordConstraints" class="password-constraints"></div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <span id="toggleConfirmPassword" class="toggle-password">👁️</span>
+            </div>
+            <div id="errorMessage" class="error-message"></div>
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="index.html">Login here</a>.</p>
+        </form>
+    </div>
+    <footer class="footer">
+        <p>About Me: I'm Nischaya Garg, a passionate web developer dedicated to crafting user-friendly and secure applications that deliver exceptional web experiences.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
