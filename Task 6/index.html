@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NG_6 @InternPedia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://www.internpedia.in/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="logo">
+        <a href="https://www.internpedia.in/" target="_blank"><img src="https://shorturl.at/5XuIL" alt="Logo"></a>
+    </div>
+    <div class="dark-mode-toggle">
+        <button id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+    </div>
+    <div class="container">
+        <h1>To-Do List Webapp</h1>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Enter a new task" />
+            <button id="addTaskButton">Add Task</button>
+        </div>
+        
+        <h2>Pending Tasks</h2>
+        <ul id="pendingTasks" class="task-list"></ul>
+
+        <h2>Completed Tasks</h2>
+        <ul id="completedTasks" class="task-list"></ul>
+    </div>
+    <footer class="footer">
+        <p>About Me: I'm Nischaya Garg, a passionate web developer dedicated to crafting user-friendly and secure applications that deliver exceptional web experiences.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

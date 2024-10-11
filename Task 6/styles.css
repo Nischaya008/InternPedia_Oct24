@@ -1,0 +1,264 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 100px auto 20px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    transition: color 0.3s ease;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.task-list li.completed {
+    background: #e8f5e9;
+    text-decoration: line-through;
+    color: #4caf50;
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.task-handle {
+    cursor: move;
+    padding-right: 10px;
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+.task-buttons {
+    display: flex;
+}
+
+button.complete, button.edit, button.delete {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button.complete { background-color: #28a745; }
+button.edit { background-color: #ffc107; color: #333; }
+button.delete { background-color: #dc3545; }
+
+button.complete:hover { background-color: #218838; }
+button.edit:hover { background-color: #e0a800; }
+button.delete:hover { background-color: #c82333; }
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 14px;
+    padding: 15px 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer p {
+    margin: 0;
+    padding: 0 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+body.dark-mode .container {
+    background: #2a2a2a;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.1);
+}
+
+body.dark-mode input[type="text"] {
+    background-color: #3a3a3a;
+    color: #f0f0f0;
+    border-color: #4a4a4a;
+}
+
+body.dark-mode .task-list li {
+    background: #3a3a3a;
+}
+
+body.dark-mode .task-list li.completed {
+    background: #2a4a2a;
+    color: #7fff7f;
+}
+
+body.dark-mode button {
+    background-color: #4a4a4a;
+}
+
+body.dark-mode button:hover {
+    background-color: #5a5a5a;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#darkModeToggle {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode #darkModeToggle {
+    color: #f0f0f0;
+}
+
+body.dark-mode #darkModeToggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#darkModeToggle .fa-sun {
+    display: none;
+}
+
+body.dark-mode #darkModeToggle .fa-moon {
+    display: none;
+}
+
+body.dark-mode #darkModeToggle .fa-sun {
+    display: inline-block;
+}
+
+#darkModeToggle .fa-sun,
+#darkModeToggle .fa-moon {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#darkModeToggle .fa-sun {
+    opacity: 0;
+    transform: rotate(-180deg);
+}
+
+body.dark-mode #darkModeToggle .fa-moon {
+    opacity: 0;
+    transform: rotate(180deg);
+}
+
+body.dark-mode #darkModeToggle .fa-sun {
+    opacity: 1;
+    transform: rotate(0);
+}
