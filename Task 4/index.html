@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NG_4 @InternPedia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://www.internpedia.in/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo">
+        <a href="https://www.internpedia.in/" target="_blank"><img src="https://shorturl.at/5XuIL" alt="Logo"></a>
+    </div>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <input type="number" id="temperatureInput" placeholder="Enter temperature in Celsius" />
+        
+        <div class="radio-buttons">
+            <label>
+                <input type="radio" name="unit" value="celsius" checked>
+                Celsius
+            </label>
+            <label>
+                <input type="radio" name="unit" value="fahrenheit">
+                Fahrenheit
+            </label>
+        </div>
+        
+        <button id="convertButton">Convert</button>
+        
+        <h2 id="result"></h2>
+
+        <div id="history">
+            <h3>Recent Conversions</h3>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>About Me: I'm Nischaya Garg, a passionate web developer dedicated to crafting user-friendly and secure applications that deliver exceptional web experiences.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
